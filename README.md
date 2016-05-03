@@ -395,4 +395,6 @@ curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 
 
 
-
+## 9. 질의응답
+상단의 issue를 통해서 문의주시길 바랍니다.
+- https://github.com/plusfriend/auto_reply/issues
