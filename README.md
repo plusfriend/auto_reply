@@ -115,7 +115,7 @@ curl -XGET 'https://:your_server_url/keyboard'
 
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
-| keyboard | Keyboard | Required | 키보드 영역에 표현될 버튼에 대한 정보. 생략시 ```text``` 타입이 선택된다.|
+| keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Required | 키보드 영역에 표현될 버튼에 대한 정보. 생략시 ```text``` 타입이 선택된다.|
 
 - *예제*
 
@@ -166,8 +166,8 @@ curl -XPOST 'https://your_server_url/message' -d '{
 
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
-| message | Message | Required | 자동응답 명령어에 대한 응답 메시지의 내용. 7.2에서 상세 기술 |
-| keyboard | Keyboard | Optional | 키보드 영역에 표현될 명령어 버튼에 대한 정보. 생략시 text 타입(주관식 답변 키보드)이 선택된다. 7.1에서 상세 기술|
+| message | [Message](https://github.com/plusfriend/auto_reply/blob/master/README.md#62-message) | Required | 자동응답 명령어에 대한 응답 메시지의 내용. 7.2에서 상세 기술 |
+| keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Optional | 키보드 영역에 표현될 명령어 버튼에 대한 정보. 생략시 text 타입(주관식 답변 키보드)이 선택된다. 7.1에서 상세 기술|
 
 - *예제*
 
@@ -303,8 +303,8 @@ curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | text | String |  Optional | 사용자에게 발송될 메시지 텍스트(최대 1000자) |
-| photo | photo | Optional | 말풍선에 들어갈 이미지 정보. (가로, 세로, 용량 제한), 1장 제한, JPEG 포맷 |
-| message_button| MessageButton | Optional | 말풍선에 붙는 링크버튼 정보. 6.2.1에서 상세 기술 |
+| photo | [Photo](https://github.com/plusfriend/auto_reply/blob/master/README.md#63-photo) | Optional | 말풍선에 들어갈 이미지 정보. (가로, 세로, 용량 제한), 1장 제한, JPEG 포맷 |
+| message_button| [MessageButton](https://github.com/plusfriend/auto_reply/blob/master/README.md#621-messagebutton) | Optional | 말풍선에 붙는 링크버튼 정보. 6.2.1에서 상세 기술 |
  
 ```
 {
