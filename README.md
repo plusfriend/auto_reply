@@ -91,7 +91,7 @@
 - 응답 지연시간 : 권장 응답시간은 5초 이내이며, 최대 10초안에 응답이 오지 않는 경우 응답없음 메시지가 사용자에게 발송됩니다.
 - QoS : 만약 응답 실패가 10회 이상 발생하게 되면 자동적으로 해당 모듈은 지정된 장애 메시지를 리턴하게 됩니다. 더불어 앱 등록시 지정된 관리자에게 카카오톡으로 장애 메시지가 발송됩니다.
 - [플러스친구/옐로아이디 운영도구](https://yellowid.kakao.com)를 통해 설정한 개발사 서버 URL을 호출하게 됩니다.
-- 개발사 서버가 방화벽으로 보호되고 있는경우 [Server information](https://kakao.gitbooks.io/auto_reply_api/content/Server%20information.html) 문서를 참고해주세요.
+- 개발사 서버가 방화벽으로 보호되고 있는경우 [Server information](https://github.com/plusfriend/auto_reply#7-server-information) 문서를 참고해주세요.
 
 
 #### 5.1. Home Keyboard API
