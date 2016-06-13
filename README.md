@@ -49,7 +49,7 @@
 #### 3.4. 자동응답 서비스 중지
 
  - 직접 중지 : 더 이상 자동응답 서비스를 이용하지 않으시려면, 운영툴의 자동응답 > 자동응답 API 메뉴에서 '서비스 중지'를 통해 자동응답 기능을 중지할 수 있습니다.
- - 오류 횟수 초과에 따른 중지 : 자동응답 서비스에서 오류가 발생하는 경우, 카카오는 앱 정보에 등록된 전화번호를 통해 모니터링 메시지를 발송합니다. 만일 오류 횟수가 일 3000건을 초과하게 되면 카카오는 자동으로 해당 앱의 서비스를 중지합니다. 오류 횟수 초과로 인해 중지된 앱은 운영툴에서 오류 수정 후 직접 다시 서비스를 시작할 수 있습니다.
+ - 오류 횟수 초과에 따른 중지 : 자동응답 서비스에서 오류가 발생하는 경우, 카카오는 앱 정보에 등록된 전화번호를 통해 모니터링 메시지를 발송합니다. 만일 오류 횟수가 일 300건을 초과하게 되면 카카오는 자동으로 해당 앱의 서비스를 중지합니다. 오류 횟수 초과로 인해 중지된 앱은 운영툴에서 오류 수정 후 직접 다시 서비스를 시작할 수 있습니다.
  - 관리자의 차단에 따른 중지 : 파트너사에서 플러스친구/옐로아이디 API의 운영정책에 반하는 내용을 API를 통해 서비스하는 것이 확인된 경우, 카카오의 관리자는 해당 앱의 서비스를 중지할 수 있습니다. 관리자에 의해 차단된 앱은 직접 서비스를 다시 시작할 수 없으므로, 앱의 차단 사유를 확인하신 뒤 문제가 되는 내용을 수정하여 플러스친구/옐로아이디 고객센터(1544-4293)를 통해 차단 해제를 요청해 주시기 바랍니다. 
  
 
@@ -303,7 +303,7 @@ curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | text | String |  Optional | 사용자에게 발송될 메시지 텍스트(최대 1000자) |
-| photo | [Photo](https://github.com/plusfriend/auto_reply/blob/master/README.md#63-photo) | Optional | 말풍선에 들어갈 이미지 정보. (가로, 세로, 용량 제한), 1장 제한, JPEG 포맷 |
+| photo | [Photo](https://github.com/plusfriend/auto_reply/blob/master/README.md#63-photo) | Optional | 말풍선에 들어갈 이미지 정보. 1장 제한, JPEG/PNG 포맷. 6.3에서 상세 기술 |
 | message_button| [MessageButton](https://github.com/plusfriend/auto_reply/blob/master/README.md#621-messagebutton) | Optional | 말풍선에 붙는 링크버튼 정보. 6.2.1에서 상세 기술 |
  
 ```
@@ -344,9 +344,11 @@ curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | url | String | Required | 이미지 url |
-| width | Int | Required | 이미지 width |
+| width | Int | Required | 이미지 width  |
 | height | Int | Required | 이미지 height |
 
+> 이미지 권장 사이즈 : 720 x 630px  
+지원 파일형식 및 권장 용량 : jpg, png /500KB
 
 ```
 {
