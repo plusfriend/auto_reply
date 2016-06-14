@@ -130,6 +130,11 @@ curl -XGET 'https://:your_server_url/keyboard'
 - 사용자가 선택한 명령어를 파트너사 서버로 전달하는 API입니다.
 - 자동응답 명령어에 대한 답변은 응답 메시지(Message)와 응답 메시지에 따른 키보드 영역의 답변 방식(Keyboard)의 조합으로 이루어집니다. 답변 방식은 주관식(text)과 객관식(buttons) 중 선택할 수 있습니다.
 - 자동응답을 통해 친구에게 미디어 타입(사진/동영상/오디오)을 받고자 하는 경우 주관식 키보드(text)를 선택하세요. 메시지를 통해 <‘+’버튼을 눌러 미디어를 전송하세요>와 같이 안내하는 것이 필요 할 수 있습니다.
+- 유저가 보낸 미디어 타입의 카카오 서버에서의 보존기간은 아래와 같습니다.
+  - 음성파일 : 20일
+  - 이미지파일 : 20일
+  - 비디오 : 20일
+- 미디어 파일의 보존기간은 서버의 상황에 의하여 변동 될 수 있습니다.
 
 ##### Specification
 - **Method** : POST
@@ -142,7 +147,6 @@ curl -XGET 'https://:your_server_url/keyboard'
 | user\_key | String | Required | 메시지를 발송한 유저 식별 키 |
 | type | String | Required | text, photo |
 | content | String | Required | 자동응답 명령어의 메시지 텍스트 혹은 미디어 파일 uri |
-
 
 
 - *예제*
