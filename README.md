@@ -284,7 +284,7 @@ curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 ```
 
 
- -  입력
+ - 버튼 입력
    
 ```
 {
