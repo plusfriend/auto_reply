@@ -123,6 +123,7 @@ curl -XGET 'https://:your_server_url/keyboard'
 - **URL** : http(s)://:your\_server\_url/message
 - **Content-Type** : application/json; charset=utf-8
 - **Parameters**
+
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | user\_key | String | Required | 메시지를 발송한 유저 식별 키 |
@@ -144,6 +145,7 @@ curl -XPOST 'https://your_server_url/message' -d '{
 }'
 ```
 - **Response**
+
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | message | [Message](https://github.com/plusfriend/auto_reply/blob/master/README.md#62-message) | Required | 자동응답 명령어에 대한 응답 메시지의 내용. 6.2에서 상세 기술 |
@@ -189,10 +191,12 @@ curl -XPOST 'https://your_server_url/message' -d '{
 - **URL** : http(s)://:your\_server\_url/friend
 - **Content-Type** : application/json; charset=utf-8
 - **Parameters**
+
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | user\_key | String | Required | 유저 식별키 |
 - **Response**
+
 | http status code | code | message | comment |
 | ---------------- | ---- | ------- | ------- |
 | 200 | 0 | SUCCESS | 정상 응답 |
@@ -214,6 +218,7 @@ curl -XDELETE 'https://:your_server_url/friend/:user_key'
 - **URL** : http(s)://:your\_server\_url/chat\_room/:user\_key
 - **Content-Type** : application/json; charset=utf-8
 - **Response**
+
 | http status code | code | message | comment |
 | ---------------- | ---- | ------- | ------- |
 | 200 | 0 | SUCCESS | 정상 응답 |
