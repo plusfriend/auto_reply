@@ -91,18 +91,15 @@
 - **Method** : GET
 - **URL** : http(s)://:your\_server\_url/keyboard
 - **Content-Type** : application/json; charset=utf-8
-
 - **예제**
 ```
 curl -XGET 'https://:your_server_url/keyboard'
 ```
-
 - **Response**
 
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Required | 키보드 영역에 표현될 버튼에 대한 정보. 생략시 ```text``` 타입이 선택된다.|
-
 - **예제**
 ```
 {
@@ -214,13 +211,11 @@ curl -XPOST 'https://your_server_url/message' -d '{
 
 - **예제**
   - *친구 추가*
-
 ```
 curl -XPOST 'https://:your_server_url/friend' -d '{"user_key" : "HASHED_USER_KEY" }'
 ```
 
   - *친구 삭제*
-
 ```
 curl -XDELETE 'https://:your_server_url/friend/:user_key'
 ```
