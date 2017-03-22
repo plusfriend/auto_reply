@@ -92,8 +92,7 @@
 - **URL** : http(s)://:your\_server\_url/keyboard
 - **Content-Type** : application/json; charset=utf-8
 
-- *예제*
-
+- **예제**
 ```
 curl -XGET 'https://:your_server_url/keyboard'
 ```
@@ -104,9 +103,8 @@ curl -XGET 'https://:your_server_url/keyboard'
 | ---- | ---- | -------- | ----------- |
 | keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Required | 키보드 영역에 표현될 버튼에 대한 정보. 생략시 ```text``` 타입이 선택된다.|
 
-- *예제*
-
-    ```
+- **예제**
+```
 {
     "type" : "buttons",
     "buttons" : ["선택 1", "선택 2", "선택 3"]
@@ -136,7 +134,7 @@ curl -XGET 'https://:your_server_url/keyboard'
 | content | String | Required | 자동응답 명령어의 메시지 텍스트 혹은 미디어 파일 uri |
 
 
-- *예제*
+- **예제**
 
 ```
 curl -XPOST 'https://:your_server_url/message' -d '{
@@ -160,16 +158,14 @@ curl -XPOST 'https://your_server_url/message' -d '{
 | message | [Message](https://github.com/plusfriend/auto_reply/blob/master/README.md#62-message) | Required | 자동응답 명령어에 대한 응답 메시지의 내용. 6.2에서 상세 기술 |
 | keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Optional | 키보드 영역에 표현될 명령어 버튼에 대한 정보. 생략시 text 타입(주관식 답변 키보드)이 선택된다. 6.1에서 상세 기술|
 
-- *예제*
+- **예제**
 
 ```
-
 {
     "message":{
         "text" : "귀하의 차량이 성공적으로 등록되었습니다. 축하합니다!"
     }
 }
-
 ```
 
 ```
@@ -216,16 +212,16 @@ curl -XPOST 'https://your_server_url/message' -d '{
 | ---------------- | ---- | ------- | ------- |
 | 200 | 0 | SUCCESS | 정상 응답 |
 
-- *예제*
+- **예제**
   - *친구 추가*
 
-  ```
+```
 curl -XPOST 'https://:your_server_url/friend' -d '{"user_key" : "HASHED_USER_KEY" }'
 ```
 
   - *친구 삭제*
 
-  ```
+```
 curl -XDELETE 'https://:your_server_url/friend/:user_key'
 ```
 
@@ -243,13 +239,13 @@ curl -XDELETE 'https://:your_server_url/friend/:user_key'
 | ---------------- | ---- | ------- | ------- |
 | 200 | 0 | SUCCESS | 정상 응답 |
 
-- *예제*
+- **예제**
 
 ```
 curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 ```
 
-##6. Object
+## 6. Object
 
 ##### 6.1. Keyboard
 
