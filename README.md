@@ -5,10 +5,10 @@
 ## 1. 이용에 대한 참고사항
 
  1. 서버간 통신은 보안을 위하여 HTTPS를 쓰도록 권장합니다.<br/>
- 1. HTTPS를 통하여 API를 이용하는 파트너사 서버는 유효한 공인인증서를 사용해야 합니다.<br/>
- 1. user\_key는 외부에 노출되지 않도록 주의해 주시기 바랍니다.<br/>
- 1. 플러스친구/옐로아이디 API를 통해 이루어진 이용자와의 대화 기록, 이용자가 보낸 멀티미디어 파일 등은 카카오에서 저장하지 않습니다. 보관이 필요한 경우에는 파트너사에서 별도로 저장히시기 바랍니다.<br/>
- 1. 플러스친구/옐로아이디 API 운영에 대한 정책 및 가이드라인은 플러스친구 이용가이드 혹은 옐로아이디 [운영정책](https://yellowid.kakao.com/policy)의 API 플랫폼 운영정책을 참고해 주시기 바랍니다.<br/>
+ 2. HTTPS를 통하여 API를 이용하는 파트너사 서버는 유효한 공인인증서를 사용해야 합니다.<br/>
+ 3. user\_key는 외부에 노출되지 않도록 주의해 주시기 바랍니다.<br/>
+ 4. 플러스친구/옐로아이디 API를 통해 이루어진 이용자와의 대화 기록, 이용자가 보낸 멀티미디어 파일 등은 카카오에서 저장하지 않습니다. 보관이 필요한 경우에는 파트너사에서 별도로 저장히시기 바랍니다.<br/>
+ 5. 플러스친구/옐로아이디 API 운영에 대한 정책 및 가이드라인은 플러스친구 이용가이드 혹은 옐로아이디 [운영정책](https://yellowid.kakao.com/policy)의 API 플랫폼 운영정책을 참고해 주시기 바랍니다.<br/>
 
 ## 2. 개인정보 수집 및 이용에 대한 주의사항
 
@@ -68,7 +68,6 @@
 - 특정 카카오톡 이용자를 구분하기 위한 key 입니다. 카카오에서는 이용자의 개인정보를 외부에 제공하지 않으므로, 외부 파트너사에서 카카오톡 이용자를 구분하기 위해서는 카카오로부터 API를 통해 user\_key를 response로 받아야 합니다.
 - user\_key는 특정 카카오톡 이용자에 대해 프로필별로 각기 다르게 발급됩니다. 따라서 user\_key는 해당 프로필에 대해서만 유효합니다.
 - 카카오톡 이용자가 프로필을 차단했다가 다시 추가한 경우에는 user\_key가 갱신되지 않으며, 이용자가 카카오톡 탈퇴 후 재가입한 경우 갱신됩니다.
-<br/>
 
 
 ## 5. API specifications
@@ -102,11 +101,11 @@ curl -XGET 'https://:your_server_url/keyboard'
 
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
-| keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Required | 키보드 영역에 표현될 버튼에 대한 정보. 생략시 ```text``` 타입이 선택된다.|
+| keyboard | [Keyboard](https://github.com/plusfriend/auto_reply#6-object) | Required | 키보드 영역에 표현될 버튼에 대한 정보. 생략시 `text₩ 타입이 선택된다.|
 
 - *예제*
 
-    ```
+```
 {
     "type" : "buttons",
     "buttons" : ["선택 1", "선택 2", "선택 3"]
@@ -220,14 +219,14 @@ curl -XPOST 'https://your_server_url/message' -d '{
   - *친구 추가*
 
   ```
-curl -XPOST 'https://:your_server_url/friend' -d '{"user_key" : "HASHED_USER_KEY" }'
-```
+  curl -XPOST 'https://:your_server_url/friend' -d '{"user_key" : "HASHED_USER_KEY" }'
+  ```
 
   - *친구 삭제*
 
   ```
-curl -XDELETE 'https://:your_server_url/friend/:user_key'
-```
+  curl -XDELETE 'https://:your_server_url/friend/:user_key'
+  ```
 
 #### 5.4. 채팅방 나가기
 - 사용자가 채팅방 나가기를 해서 채팅방을 목록에서 삭제했을 경우 해당 정보를 파트너사 서버로 전달하는 API입니다.
