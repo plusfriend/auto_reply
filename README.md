@@ -125,7 +125,7 @@ curl -XGET 'https://:your_server_url/keyboard'
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | user\_key | String | Required | 메시지를 발송한 유저 식별 키 |
-| type | String | Required | text, photo |
+| type | String | Required | text, photo, video, audio |
 | content | String | Required | 자동응답 명령어의 메시지 텍스트 혹은 미디어 파일 uri |
 - **예제**
 ```
@@ -140,6 +140,20 @@ curl -XPOST 'https://your_server_url/message' -d '{
   "user_key": "encryptedUserKey",
   "type": "photo",
   "content": "http://photo_url/number.jpg"
+}'
+```
+```
+curl -XPOST 'https://your_server_url/message' -d '{
+  "user_key": "encryptedUserKey",
+  "type": "video",
+  "content": "http://video_url/vidio_name.jpg"
+}'
+```
+```
+curl -XPOST 'https://your_server_url/message' -d '{
+  "user_key": "encryptedUserKey",
+  "type": "audio",
+  "content": "http://audio_url/audio_name.jpg"
 }'
 ```
 - **Response**
