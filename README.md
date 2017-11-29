@@ -146,7 +146,7 @@ curl -XPOST 'https://your_server_url/message' -d '{
 curl -XPOST 'https://your_server_url/message' -d '{
   "user_key": "encryptedUserKey",
   "type": "video",
-  "content": "http://video_url/vidio_name.mp4"
+  "content": "http://video_url/video_name.mp4"
 }'
 ```
 ```
