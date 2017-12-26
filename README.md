@@ -259,7 +259,7 @@ curl -XDELETE 'https://:your_server_url/chat_room/HASHED_USER_KEY'
 | 필드명 | 타입 | 필수여부 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | type | String | Required | buttons: 객관식 응답의 목록을 구성할 수 있음 <br/>text: 주관식 응답을 입력받을 수 있음 |
-| buttons | Array[String] | Optional | 객관식 응답 내용의 목록 |
+| buttons | Array[String] | Optional | 객관식 응답 내용의 목록 <br/>(최대 100개)|
 
  - 직접 입력
 ```
