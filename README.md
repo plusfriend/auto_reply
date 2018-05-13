@@ -133,15 +133,16 @@ curl -XPOST 'https://:your_server_url/message' -d '{
   "user_key": "encryptedUserKey",
   "type": "text",
   "content": "차량번호등록"
-}'
+}' -H 'Content-Type: application/json'
 ```
 ```
-curl -XPOST 'https://your_server_url/message' -d '{
+curl -XPOST 'https://:your_server_url/message' -d '{
   "user_key": "encryptedUserKey",
   "type": "photo",
   "content": "http://photo_url/number.jpg"
-}'
+}' -H 'Content-Type: application/json'
 ```
+
 - **Response**
 
 | 필드명 | 타입 | 필수여부 | 설명 |
@@ -201,7 +202,7 @@ curl -XPOST 'https://your_server_url/message' -d '{
 - **예제**
  - *친구 추가*
 ```
-curl -XPOST 'https://:your_server_url/friend' -d '{"user_key" : "HASHED_USER_KEY" }'
+curl -XPOST 'https://:your_server_url/friend' -d '{"user_key" : "HASHED_USER_KEY" }' -H 'Content-Type: application/json'
 ```
  - *친구 삭제*
 ```
