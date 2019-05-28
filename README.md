@@ -1,6 +1,6 @@
 ## [안내] 카카오 i 오픈빌더(챗봇 빌더 플랫폼) 문의하기
 
-카카오 i 오픈빌더(https://i.kakao.com)에 대한 문의는 kakao i developers DevTak(https://i.kakao.com/forum)에서 받고 있습니다. 
+카카오 i 오픈빌더(https://i.kakao.com) 에 대한 문의는 kakao i developers DevTak(https://i.kakao.com/forum) 에서 받고 있습니다. 
 카카오 i 오픈빌더를 통한 챗봇 제작 관련 문의는 kakao i developers DevTak에 해주시면 감사하겠습니다. 
 
 ## [공지] API형 스마트채팅 신규 등록 중단 및 카카오 i 오픈빌더 오픈 안내 
